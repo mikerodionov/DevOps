@@ -1,0 +1,6 @@
+resources
+| mvexpand tags
+| extend tagKey = tostring(bag_keys(tags)[0])
+| extend tagValue = tostring(tags[tagKey])
+| where tagKey =~ "SqlEndpointId" and ['type'] =~ "microsoft.compute/virtualmachines"
+| project resourceGroup = resourceGroup, name = name, vmSize = properties.hardwareProfile.vmSize
