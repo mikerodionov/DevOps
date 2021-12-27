@@ -1,0 +1,5 @@
+AzureDiagnostics
+// status_s possible values: Queued, InProgress, Succeeeded, Cancelling, Cancelled, Failed
+| where Category == "PipelineRuns" and status_s == "Succeeded"
+| where ResourceProvider == "MICROSOFT.DATAFACTORY"
+| summarize count(runId_g) by Resource
