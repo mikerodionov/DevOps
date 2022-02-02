@@ -11,7 +11,7 @@ $token = 'endpoints/{0}' -f $projectId
 
 # View Project Permissions
 az devops security permission show `
---id $projectId `
+--id $namespace `
 --subject $descriptor `
 --token $token
 
