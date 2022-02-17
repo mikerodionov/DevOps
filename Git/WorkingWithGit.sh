@@ -10,3 +10,17 @@ git fetch --all --prune
 
 # To merge between main and working branch, pull main branch then switch to working and run (when working gets behing main)
 git merge main
+
+# Options when you receive - "Commit your changes or stash them before you can merge"
+# Commit your local changes
+git commit -m "My message"
+# Stash your local changes - stashing acts as a stack, where you can push changes, and you pop them in reverse order
+git stash
+# If you used stash - then do the merge and then pull stash
+git stash pop
+# Discard local changes - option A
+git reset --hard
+# Discard local changes - option B
+git checkout -t -f remote/branch
+# Discard local changes for a specific file
+git checkout filename
