@@ -1,15 +1,17 @@
 targetScope = 'subscription'
 
-param rgName string = 'Resource Group Name'
+param name string = 'Resource Group Name'
 @description = "Azure Region"
-param rgLocation  string = 'Nort'
-@allowed([
-
-])
+param location string
+@description = "Tags"
+var tags = {
+  tag1 = 'Tag 1'
+  tag2 = 'Tag 2'
+}
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
-  name: rgName
-  location: rgLocation
+  name: Name
+  location: Location
   tags: tags
 }
 
