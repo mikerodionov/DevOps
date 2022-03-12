@@ -1,3 +1,8 @@
+# Initial config for commits
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
+# Verify
+git config --list
 # To delete remote branch
 git push RemoteName --delete BranchName
 # Wnen remote branch was deleted on GitHub/in Azure DevOps repo you will still need to delete your local branch
