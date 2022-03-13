@@ -2,7 +2,7 @@ az -help
 az version
 az upgrade
 # List RGs
-az group list
+az group list --output table
 # List files
 ls -la
 # Invoke built-in VC
