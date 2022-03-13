@@ -1,6 +1,7 @@
-az -help
-az version
-az upgrade
+az bicep install
+az bicep --help
+az bicep version
+az bicep upgrade
 # List RGs
 az group list --output table
 # List files
