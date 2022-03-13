@@ -1,3 +1,6 @@
+az -help
+az version
+az upgrade
 # List RGs
 az group list
 # List files
