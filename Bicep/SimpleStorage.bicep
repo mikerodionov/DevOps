@@ -1,14 +1,9 @@
-// simplestorage.bicep
-
-resource azurebicepstorage 'Microsoft.Storage/storageAccounts@2021-02-01' = {
-  name: 'firstbicepstg21'
-  location: 'eastus2'
-  kind: 'StorageV2'
+// Use Bicep extension of VS Code & then res required properties to build minimum required definition
+resource bicepStorage 'Microsoft.Storage/storageAccounts@2021-08-01' = {
+  name: 'bicepstgdemomikhail'
+  location: 'eastus'
   sku: {
     name: 'Standard_LRS'
   }
-  tags: {
-    Environment: 'Demo'
-    Project: 'First Look into Azure Bicep'
-  }
+  kind: 'StorageV2'
 }
