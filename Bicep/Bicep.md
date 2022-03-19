@@ -3,7 +3,7 @@
 ## Deployment scopes
 
 * Default = Resource Group
-* Defined scopes:
+* Defined (explicit) scopes:
     * Management group
     * Tenant
     * Subscription
