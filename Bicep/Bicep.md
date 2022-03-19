@@ -8,7 +8,7 @@
     * Tenant
     * Subscription
 
-![image](https://user-images.githubusercontent.com/13007691/159129327-e4490493-7f37-403b-887b-95bfa7862aa5.png)
+![image](/Bicep/Images/BicepDeploymentTargetScopes.png)
 
 ## Module Design Patterns
 
