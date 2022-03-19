@@ -1,5 +1,13 @@
 # Azure Bicep Useful Information & Tips
 
+## Deployment scopes
+
+* Default = Resource Group
+* Defined scopes:
+    * Management group
+    * Tenant
+    * Subscription
+
 ## Module Design Patterns
 
 * Clear purpose, e.g. create modules which group resources by intended use
