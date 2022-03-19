@@ -1,0 +1,18 @@
+# Login to Azure
+az Login
+# If above command does not work/no browser window appears use this
+az login --use-device-code
+# Verify subscription you logged into
+az account show --query name
+
+# Deploy RG and SimpleStorage.bicep
+az group create -l eastus2 -g 'rg-bicepdeploymenttest'
+# -c to validate bicep before deployment (comopare against target) and displays changes (if any)
+az deployment group create -g 'rg-bicepdeploymenttest' -f .\ScopesContainerRegistry.bicep -c
+# List 
+az acr list --query [].name -o table
+
+# Deploy SimpleStorage.bicep using parameters file
+az deployment group create -g 'rg-bicepdeploymenttest' -f .\ScopesContainerRegistry.bicep
+# Clear up resources without confirmation prompt
+az group delete --name 'rg-bicepdeploymenttest' --yes
