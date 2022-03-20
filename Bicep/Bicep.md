@@ -52,3 +52,12 @@ az deployment group what-if -g 'bicep-test' -f .\DownloadedArmTemplate.json
 # When you get ARM as is from portal you can get OK from what-if pre-flight check, yet failure on deploy
 # Usually you neec correct/edit resources - removing undefined properties and any red errors highlighted in VS Code
 ```
+
+## Decompile Azure Bicep
+
+```
+# Convert ARM/JSON to Bicep
+az bicep decompile -f .\BicepDemo.json
+# Remove read-only properties from Bicep and deploy with pre-flight validation
+az deployment group create -g 'rg-bicep-test' -f .\BicepDemo.bicep -c
+```
