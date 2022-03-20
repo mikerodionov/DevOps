@@ -1,0 +1,6 @@
+# Deploy RG
+az group create -l eastus2 -g 'rg-bicepdeploymenttest'
+# Deploy resources into RG
+az deployment group create -g 'rg-bicepdeploymenttest' -f .\DeployModule.bicep -c
+# Clear up
+az group delete --name 'rg-bicepdeploymenttest' --yes

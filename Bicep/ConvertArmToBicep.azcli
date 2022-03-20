@@ -1,0 +1,14 @@
+az bicep --help
+# Decompile ARM into Bicep file - best effort result
+# You may need to adjust final code produced by that command
+az bicep decompile --help
+# Example
+# Convert JSON to Bicep
+az bicep decompile -f DeployModuleARM.json
+# Address red warnings in produced Bicep file (remove read only properties etc.), then change name and deploy
+# Deploy RG
+az group create -l eastus2 -g 'rg-bicepdeploymenttest'
+# Deploy resources into RG using Bicep file
+az deployment group create -g 'rg-bicepdeploymenttest' -f .\ConvertArmToBicepSampleARM.bicep -c
+# Clear up resources without confirmation prompt
+az group delete --name 'rg-bicepdeploymenttest' --yes

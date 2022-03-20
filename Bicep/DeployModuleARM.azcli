@@ -1,0 +1,10 @@
+# Deploy RG
+az group create -l eastus2 -g 'rg-bicepdeploymenttest'
+# Deploy resources into RG - pre-flight check
+az deployment group what-if -g 'rg-bicepdeploymenttest' -f .\DeployModuleARM.json
+# Deploy resources into RG
+az deployment group create -g 'rg-bicepdeploymenttest' -f .\DeployModuleARM.json
+# Verify results
+az group list -o table
+# Clear up
+az group delete --name 'rg-bicepdeploymenttest' --yes

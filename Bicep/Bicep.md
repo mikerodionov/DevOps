@@ -33,3 +33,22 @@ az deployment sub what-if --location eastus --template-file .\yourtemplate.bicep
 ```
 az deployment sub create --location eastus --template-file .\yourtemplate.bicep -c
 ```
+
+## When you still need to look at ARM templates?
+
+* Brownfield project - we can use ARM templates and Resource visualizer to explore existing resources and dependencies
+* Discovery of Azure environment resources - we can use ARM templates and Resource visualizer to explore existing resources and dependencies
+* Identifying configuration and current state of Azure resources - we can read through ARM template to see resources configuration
+
+### Azure Resources Visualizer
+
+Azure Portal > Resource Group > Automation > Export Template > Visualize Template
+
+![image](/Bicep/Images/AzurePortalResourceVisualizer.png)
+
+It is normally possibly to download and deploy ARM template as is:
+```
+az deployment group what-if -g 'bicep-test' -f .\DownloadedArmTemplate.json
+# When you get ARM as is from portal you can get OK from what-if pre-flight check, yet failure on deploy
+# Usually you neec correct/edit resources - removing undefined properties and any red errors highlighted in VS Code
+```
