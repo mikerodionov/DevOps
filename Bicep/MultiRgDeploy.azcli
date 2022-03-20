@@ -1,0 +1,10 @@
+# Login to Azure
+az Login
+# Deploy MultiRgDeploy.bicep with pre-flight validation (-c)
+az deployment sub create -l eastus -f .\MultiRgDeploy.bicep -c
+# Verify results
+az group list -o table
+# Clear up
+az group delete --name 'bicep-applications-rg' --yes
+az group delete --name 'bicep-containers-rg' --yes
+az group delete --name 'bicep-storages-rg' --yes
