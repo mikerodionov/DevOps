@@ -25,7 +25,7 @@ git fetch --all --prune
 ```
 
 ## To merge between main and working branch, pull main branch then switch to working and run (when working gets behing main)
-``
+```
 git merge main
 
 # Options when you receive - "Commit your changes or stash them before you can merge"
