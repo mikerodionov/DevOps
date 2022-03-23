@@ -19,9 +19,6 @@ MAC: Command + /
 ```
 ### Split editor right
 ```
-CTRL + \
-```
-### Split editor down
-```
-ALT + \
+CTRL + \ - will split with tab duplicating current file
+CTRL + 2 - will split with empty tab
 ```
