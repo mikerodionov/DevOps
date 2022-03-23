@@ -17,3 +17,11 @@ It may not work for unrecognized/non supported file extension, for example it wo
 WIN: CTRL + /
 MAC: Command + /
 ```
+### Split editor right
+```
+CTRL + \
+```
+### Split editor down
+```
+ALT + \
+```
