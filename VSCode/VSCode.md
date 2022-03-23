@@ -11,7 +11,7 @@ Or via settings.json setting:
 
 ### Comment/uncomment block
 
-It may not work depending on file extension, for example it does not work for azcli files.
+It may not work for unrecognized/non supported file extension, for example it won't not work for azcli files if Azure CLI Tools extension.
 
 ```
 WIN: CTRL + /
