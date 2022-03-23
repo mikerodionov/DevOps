@@ -11,6 +11,8 @@ Or via settings.json setting:
 
 ### Comment/uncomment block
 
+It may not work depending on file extension, for example it does not work for azcli files.
+
 ```
 WIN: CTRL + /
 MAC: Command + /
