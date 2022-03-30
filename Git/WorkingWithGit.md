@@ -12,16 +12,16 @@ git push RemoteName --delete BranchName
 git branch -d origin/BranchName -r
 # to verify/list remote brances
 git branch -r
-```
-
-## Delete local branch
-```
-git branch -d local_branch_name
 # Once remote branch was deleted you need to propogate changes locally
 # fectch - to download objects and refs from another repository/repositories
 # --all - specifies to fetch all remotes
 # --prune - specifies to remove any remote-tracking references that no longer exist on the remote before fetching
 git fetch --all --prune
+```
+
+## Delete local branch
+```
+git branch -d local_branch_name
 ```
 
 ## To merge between main and working branch, pull main branch then switch to working and run (when working gets behing main)
