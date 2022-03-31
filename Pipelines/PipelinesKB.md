@@ -3,7 +3,7 @@
 ## Passing in variables as a values to job parameter
 
 In a pipeline you cad define pipeline level variables and then pass them in as a value for job parameters
-```
+```yaml
 name: Deploy_Resource_Group
 trigger: none # will disable CI builds (but not PR builds)
 variables:
@@ -15,7 +15,7 @@ jobs:
       myparameter: $(myvariable)
 ```
 You can reference variable in a lazy or explicit way:
-```
+```yaml
 myparameter: $(myvariable) # This can be resolved only on run stage
 myparameter: ${{ variables.myvariable }} # This can be resolved both on run and build stage
 ```
