@@ -5,6 +5,17 @@ git config --global user.email "youremail@yourdomain.com"
 # Verify
 git config --list
 ```
+
+## When you need to push creating remote branch
+
+When remote branch not yet exist and you need to create if from local branch:
+
+```
+# Command below specify tracking branch on push
+# -u is a short form of --set-upstream
+git push -u origin master
+```
+
 ## Delete remote branch
 ```
 git push RemoteName --delete BranchName
