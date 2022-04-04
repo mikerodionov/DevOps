@@ -21,5 +21,15 @@ myparameter: ${{ variables.myvariable }} # This can be resolved both on run and 
 ```
 As a best practice, always use explicit variable reference for all parameter values to ensure they are resolvable/available on all stages of pipeline.
 
-## To pull resources from specific branch
+## To pull repositotry resources from specific branch
+
+Pipeline can use resources (templates) from another repositorty. In this case branch can be specified using ref parameter.
+```yaml
+resources:
+  repositories:
+  - repository: string  # identifier (A-Z, a-z, 0-9, and underscore)
+    type: enum  # see the following "Type" topic
+    name: string  # repository name (format depends on `type`)
+    ref: string  # ref name to use; defaults to 'refs/heads/main'
+```
 
