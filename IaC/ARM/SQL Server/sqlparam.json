@@ -1,0 +1,17 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sqlAdmin": {
+        "value": "admin"
+        },
+        "sqlPwd": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/%SUBSCRIPTION_ID%/resourceGroups/RG1/providers/Microsoft.KeyVault/vaults/test-kv"
+                },
+                "secretName": "sqlpassword"
+                }
+            }
+    }
+}
