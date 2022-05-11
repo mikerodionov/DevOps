@@ -13,3 +13,8 @@ docker rm -f $(docker ps -a -q)
 # Docker Swarm info & commands
 
 Swarm config folder (should be backed up): /var/lib/docker/swarm
+
+List Docker Swarm nodes:
+```Bash
+docker node ls
+```
