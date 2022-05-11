@@ -12,7 +12,13 @@ docker rm -f $(docker ps -a -q)
 
 # Docker Swarm info & commands
 
-Swarm config folder (should be backed up): /var/lib/docker/swarm
+Swarm config folder (should be backed up):
+
+```Bash
+/var/lib/docker/swarm
+```
+
+This folder contains - certificates, docker-state.json, raft, state.json, worker
 
 List Docker Swarm nodes:
 ```Bash
