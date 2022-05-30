@@ -12,8 +12,9 @@ Run sh script
 ./yourscript.sh
 ```
 
-Count number of lines in outoput - wc -l
+Count number of lines in outoput - wc -l OR grep "" -c
 
 ```Bash
 kubectl -n namespace_name get pods | wc -l
+kubectl -n namespace_name get pods | grep "" -c
 ```
