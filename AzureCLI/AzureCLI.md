@@ -19,6 +19,12 @@ az account show --subscription SubscriptionName | jq -r '.tenantId'
 ```Bash
 az aks get-versions --location westeurope --output table
 ```
+## Sign-in to AKS cluster
+
+```Bash
+az aks get-credentials --resource-group rg-name --name aks-name
+```
+
 ## Get available Azure VM sizes
 
 ```Bash
