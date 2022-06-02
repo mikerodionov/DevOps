@@ -6,3 +6,9 @@
 # If necessary install jq with sudo apt install jq
 az account show --subscription SubscriptionName | jq -r '.tenantId'
 ```
+
+## Get AKS versions
+
+```Bash
+az aks get-versions --location westeurope --output table
+```
