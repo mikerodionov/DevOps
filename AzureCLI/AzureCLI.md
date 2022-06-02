@@ -16,4 +16,10 @@ az aks get-versions --location westeurope --output table
 
 ```Bash
 az vm list-sizes --location germanywestcentral --output table | grep Standard_F
+az vm list-skus --location germanywestcentral --output table | grep Standard_F
+```
+## Get VNET info
+
+```Bash
+az network vnet show --resource-group vnet-rg-name --name vnet-name
 ```
