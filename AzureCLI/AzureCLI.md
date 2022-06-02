@@ -12,3 +12,8 @@ az account show --subscription SubscriptionName | jq -r '.tenantId'
 ```Bash
 az aks get-versions --location westeurope --output table
 ```
+## Get available Azure VM sizes
+
+```Bash
+az vm list-sizes --location germanywestcentral --output table | grep Standard_F
+```
