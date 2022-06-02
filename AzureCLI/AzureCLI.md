@@ -1,5 +1,12 @@
 # Azure CLI Tips & Tricks
 
+## List Azure Subscriptions & shange active subscription
+
+```Bash
+az account list --output table
+az account set --subscription subscription-name
+```
+
 ## Get tenant ID for subscription
 
 ```Bash
