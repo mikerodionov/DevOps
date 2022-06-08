@@ -7,6 +7,16 @@
 su -
 ```
 
+## Get Linux version
+
+```Bash
+# Ubuntu
+cat /etc/lsb-release 
+# CentOS
+cat /etc/redhat-release
+lsb_release -a
+```
+
 ## Grant execute permissions on sh script file:
 
 ```Bash
