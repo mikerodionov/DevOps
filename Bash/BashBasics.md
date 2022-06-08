@@ -19,9 +19,10 @@ chmod +x /path/to/yourscript.sh
 ./yourscript.sh
 ```
 
-## Count number of lines in outoput - wc -l OR grep "" -c
+## Count number of lines in outoput
 
 ```Bash
+# We can use wc -l OR grep "" -c
 kubectl -n namespace_name get pods | wc -l
 kubectl -n namespace_name get pods | grep "" -c
 ```
