@@ -17,7 +17,7 @@ cat /etc/redhat-release
 lsb_release -a
 ```
 
-## Grant execute permissions on sh script file:
+## Grant execute permissions on sh script file
 
 ```Bash
 chmod +x /path/to/yourscript.sh
@@ -35,4 +35,10 @@ chmod +x /path/to/yourscript.sh
 # We can use wc -l OR grep "" -c
 kubectl -n namespace_name get pods | wc -l
 kubectl -n namespace_name get pods | grep "" -c
+```
+
+## Pipe output into cliplboard
+
+```Bash
+cat test.tx | xclip -sel clip
 ```
