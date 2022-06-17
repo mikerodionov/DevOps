@@ -1,5 +1,5 @@
 # Author: Mikhail Rodionov
-# Description: Delete all LB rules for specific Azure LB script
+# Description: Delete all LB rules for specific Azure LB
 # Prerequisites: Linux shell + Azure CLI installed
 
 # Set variables
