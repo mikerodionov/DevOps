@@ -29,3 +29,9 @@ kubectl describe configmaps <name>
 # View decoded K8s secret
 kubectl get secret <SECRET_NAME> -o jsonpath="{.data.<DATA>}" | base64 --decode
 ```
+
+## SSH into K8s pod
+
+```Bash
+kubectl exec -it pod_name -n namespace_name -- bash
+```
