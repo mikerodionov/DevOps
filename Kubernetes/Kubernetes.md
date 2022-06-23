@@ -15,3 +15,17 @@ kubectl delete all --all -n namespace_name
 # Command below will delete all AKS namespaces except default, kube-public, kube-system
 kubectl delete namespace $(kubectl get namespaces --no-headers=true | awk {'print $1'})
 ```
+
+## Work with configmaps
+
+```Bash
+# View configmap
+kubectl describe configmaps <name>
+```
+
+## Work with secrets
+
+```Bash
+# View decoded K8s secret
+kubectl get secret <SECRET_NAME> -o jsonpath="{.data.<DATA>}" | base64 --decode
+```
