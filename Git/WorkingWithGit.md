@@ -53,3 +53,9 @@ git checkout -t -f remote/branch
 # Discard local changes for a specific file
 git checkout filename
 ```
+
+## View remote repo URL
+
+```Bash
+git config --get remote.origin.url
+```
