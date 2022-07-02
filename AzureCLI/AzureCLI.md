@@ -36,3 +36,9 @@ az vm list-skus --location germanywestcentral --output table | grep Standard_F
 ```Bash
 az network vnet show --resource-group vnet-rg-name --name vnet-name
 ```
+
+## Ger region Display Names and Names
+
+```Bash
+az account list-locations --query "[].{DisplayName:displayName, Name:name}" -o table
+```
