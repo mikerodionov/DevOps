@@ -55,3 +55,31 @@ resource "azurerm_resource_group" "state-demo-secure" {
 ```Bash
 terraform init
 ```
+
+# Creating Terraform initialization alias
+
+## Retrirving storage account key using VARS
+
+```Bash
+SUBSCRIPTION_NAME=mysybscription
+RESOURCE_GROUP_NAME=tfstate
+STORAGE_ACCOUNT_NAME=tfstate'devopslabs2022'
+CONTAINER_NAME=tfstate'-devops-labs'
+alias tfinit='az account set --subscription SUBSCRIPTION_NAME && ACCOUNT_KEY=$(az storage account keys list --resource-group $RESOURCE_GROUP_NAME --account-name $STORAGE_ACCOUNT_NAME --query '[0].value' -o tsv) && sleep 10 && az account set --subscription SUBSCRIPTION_NAME && terraform init -upgrade=true'
+```
+
+## Generating temporary and limited storage account SAS using VARS
+
+For regular use make VARS permanent and/or use permanent aliases.
+
+```Bash
+SUBSCRIPTION_NAME=mysybscription
+RESOURCE_GROUP_NAME=tfstate
+STORAGE_ACCOUNT_NAME=tfstate'devopslabs2022'
+CONTAINER_NAME=tfstate'-devops-labs'
+TOMORROW='date --utc -d "+1 days" "+%Y-%m-%dT%H:%MZ"'
+MYIP='curl -4 -s ifconfig.io'
+# Safer option con temporary limited SAS can be used
+alias tfinit='
+export az account set --subscription SUBSCRIPTION_NAME && ARM_SAS_TOKEN=$(az storage container generate-sas --subscription SUBSCRIPTION_NAME --account-name STORAGE_ACCOUNT_NAME --name CONTAINER_NAME --as-user --auth-mode login --https-only --permissions rwdl --expiry TOMORROW --ip MYIP --output tsv) && sleep 10 && az account set --subscription SUBSCRIPTION_NAME && terraform init -upgrade=true'
+```
