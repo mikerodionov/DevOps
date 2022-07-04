@@ -80,6 +80,5 @@ CONTAINER_NAME=tfstate'-devops-labs'
 TOMORROW='date --utc -d "+1 days" "+%Y-%m-%dT%H:%MZ"'
 MYIP='curl -4 -s ifconfig.io'
 # Safer option con temporary limited SAS can be used
-alias tfinit='
-export az account set --subscription SUBSCRIPTION_NAME && ARM_SAS_TOKEN=$(az storage container generate-sas --subscription SUBSCRIPTION_NAME --account-name STORAGE_ACCOUNT_NAME --name CONTAINER_NAME --as-user --auth-mode login --https-only --permissions rwdl --expiry TOMORROW --ip MYIP --output tsv) && sleep 10 && az account set --subscription SUBSCRIPTION_NAME && terraform init -upgrade=true'
+alias tfinit='export az account set --subscription SUBSCRIPTION_NAME && ARM_SAS_TOKEN=$(az storage container generate-sas --subscription SUBSCRIPTION_NAME --account-name STORAGE_ACCOUNT_NAME --name CONTAINER_NAME --as-user --auth-mode login --https-only --permissions rwdl --expiry TOMORROW --ip MYIP --output tsv) && sleep 10 && az account set --subscription SUBSCRIPTION_NAME && terraform init -upgrade=true'
 ```
