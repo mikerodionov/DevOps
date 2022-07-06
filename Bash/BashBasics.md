@@ -3,8 +3,12 @@
 ## Switch to root
 
 ```Bash
-# Switch to root
+# Switch to root / will prompt password
 su -
+# Get root access, but maintain your current SHELL, which means that shell specific settings, including your current directory, are preserved; for instance if you use bash (Ubuntu's default shell), aliases (and any other settings from ~/.bashrc) are kept when you switch to the root user / no password prompt
+sudo -s
+# Leave root mode
+exit
 ```
 
 ## Get Linux version
