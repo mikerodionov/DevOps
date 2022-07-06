@@ -72,4 +72,11 @@ git checkout master
 # aren't already in upstream/master are replayed on top of that
 # other branch:
 git rebase upstream/master
+# OR to avoid rewriting history of your master branch
+git merge upstream/master
+```
+## Cancel git rebase
+
+```Bash
+git rebase --abort
 ```
