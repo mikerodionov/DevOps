@@ -11,6 +11,9 @@ az account set --subscription subscription-name
 
 ```Bash
 # If necessary install jq with sudo apt install jq
+# For current subscription
+az account show | jq -r '.tenantId'
+# Explicitly specifying subscription
 az account show --subscription SubscriptionName | jq -r '.tenantId'
 ```
 
