@@ -46,3 +46,9 @@ kubectl -n namespace_name get pods | grep "" -c
 ```Bash
 cat test.tx | xclip -sel clip
 ```
+## User management
+
+```Bash
+# Delete user
+sudo deluser user1
+```
