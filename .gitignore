@@ -1,2 +1,4 @@
 Terraform/Examples/AKS/.terraform.lock.hcl
-Terraform/Examples/AKS/.terraform
+Terraform/Examples/Blobfuse/.terraform.lock.hcl
+Terraform/Examples/AKS/.terraform/*
+Terraform/Examples/Blobfuse/.terraform/*
