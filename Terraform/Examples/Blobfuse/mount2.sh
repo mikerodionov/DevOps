@@ -14,11 +14,12 @@ EOF
 
 cat << EOF > /etc/rc.local
 #!/bin/bash
-blobfuse /logs --tmp-path=/mnt/resource/blobfusetmp  --config-file=/etc/fuse_connection.cfg -o attr_timeout=240 -o entry_timeout=240 -o negative_timeout=120
+blobfuse /usr/logs --tmp-path=/mnt/resource/blobfusetmp  --config-file=/etc/fuse_connection.cfg -o attr_timeout=240 -o entry_timeout=240 -o negative_timeout=120
 exit 0
 EOF
 
 mkdir /usr/logs
+chmod -r 660 /usr/logs
 sudo chmod 775 /etc/rc.local
 # useradd -m -p P@ssw0rd -s /bin/bash logreader
 sudo systemctl enable rc-local.service
