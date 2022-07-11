@@ -19,7 +19,11 @@ exit 0
 EOF
 
 mkdir /usr/logs
-chmod -r 660 /usr/logs
+addgroup logreaders
+useradd logreader
+chown -R logreader:logreaders /usr/logs
+chmod -R 650 /usr/logs
+
 sudo chmod 775 /etc/rc.local
 # useradd -m -p P@ssw0rd -s /bin/bash logreader
 sudo systemctl enable rc-local.service
