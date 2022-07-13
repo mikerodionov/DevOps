@@ -38,3 +38,7 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 EOF
+
+# Start service & enable run on system startup
+sudo systemctl start blobfusemount
+sudo systemctl enable blobfusemount
