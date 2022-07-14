@@ -17,8 +17,9 @@ exit
 # Ubuntu
 cat /etc/lsb-release 
 # CentOS
+rpm -q centos-release
 cat /etc/redhat-release
-lsb_release -a
+lsb_release -a # Requires redhat-lsb package to be installed
 ```
 
 ## Grant execute permissions on sh script file
