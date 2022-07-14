@@ -17,9 +17,12 @@ exit
 # Ubuntu
 cat /etc/lsb-release 
 # CentOS
-rpm -q centos-release
-cat /etc/redhat-release
-lsb_release -a # Requires redhat-lsb package to be installed
+cat /etc/redhat-release # requires CentOS 6+
+cat /etc/centos-release # requires CentOS 6+
+rpm -q centos-linux-release # requires CentOS 6+ & centos-linux-release package
+rpm -q centos-release # requires CentOS 6+
+lsb_release -a # requires redhat-lsb package to be installed
+rpm -E %{rhel} # RPM macro to get major version
 ```
 
 ## Grant execute permissions on sh script file
