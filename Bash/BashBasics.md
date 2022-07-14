@@ -56,3 +56,11 @@ cat test.tx | xclip -sel clip
 # Delete user
 sudo deluser user1
 ```
+
+## SSH
+
+```Bash
+# Check SSH Server version
+ssh -v localhost
+ssh -v
+```
