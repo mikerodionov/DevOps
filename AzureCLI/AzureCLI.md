@@ -45,3 +45,14 @@ az network vnet show --resource-group vnet-rg-name --name vnet-name
 ```Bash
 az account list-locations --query "[].{DisplayName:displayName, Name:name}" -o table
 ```
+
+## Azure VMs
+
+```Bash
+# Update VM user password
+az vm user update \
+  --resource-group myResourceGroup \
+  --name myVM \
+  --username azureuser \
+  --password myNewPassword
+```
