@@ -64,3 +64,31 @@ sudo deluser user1
 ssh -v localhost
 ssh -v
 ```
+
+## Navugatung directories
+
+```Bash
+# Go back to a previous directory
+cd -
+# Go to a home directory
+cd ~
+# pushd and popd - allow you to go back to directory you entered with pushd, or subsequent directories stored in stack
+# to view stack of directories use
+pushd /var
+```
+
+## Clear screen
+
+```Bash
+# Clear screen with CTRL+L (moves command prompt back to the top of the screen, you can still scroll up and see preceeding commands) or clear command preserving history
+clear
+# To reset shell and remove history
+reset
+```
+
+## Minimizing an app
+
+```Bash
+# Run program and go back to the same terminal leaving program running - CTRL + Z - that menimizes program to background
+# To return to the app - fg command
+```
