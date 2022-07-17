@@ -73,7 +73,7 @@ cd -
 # Go to a home directory
 cd ~
 # pushd and popd - allow you to go back to directory you entered with pushd, or subsequent directories stored in stack
-# to view stack of directories use
+# to view stack of directories (history of dirs to which you navigated via popd) use
 pushd /var
 ```
 
@@ -86,11 +86,13 @@ clear
 reset
 ```
 
-## Minimizing an app
+## Minimizing an app (bacground/foreground)
 
 ```Bash
-# Run program and go back to the same terminal leaving program running - CTRL + Z - that menimizes program to background
-# To return to the app - fg command
+# Run program and go back to the same terminal leaving program running - CTRL + Z - that minimizes program to background
+# To return to the app - fg command (foregroung)
+# htop - utility to monitor system resources: htop CTRL + Z, fg
+# If you close shell you will lose whatever is running in background
 ```
 
 ## Select all in nano
@@ -99,3 +101,56 @@ To select all in nano it is possible to use
 - Ctrl+6 - to set a mark in the very beginning of a file
 - Alt+T (or Alt+Shift+T) to cut to the end of the file
 - Ctrl+U - to uncut content (but you should still be able to paste it)
+
+## Repeating the last command with sudo
+
+```Bash
+# To repeat previous command with sudo
+sudo !!
+```
+
+## Command history navigation
+
+Ctrl + R - reverse search
+
+```Bash
+# Get a history of previously run commands
+history
+# ! + number to re-run command
+!105
+# Get a time when command was run
+HISTTIMEFORMAT="%Y-%m-%d %T "
+history
+# To make variable permanent add it to ~/bashrc
+HISTTIMEFORMAT="%Y-%m-%d %T "
+# To make command not visible in history set variable & prepend command with space
+HISTCONTROL=ignoreboth
+```
+
+## cmatrix
+
+cmartix :), F11 & enjoy
+
+## Font increase/decrease
+
+Ctrl+Shift+Plus - increase
+Ctrl+Minus - decrease
+
+## Delete entire line
+
+Ctrl + U - delete all
+Ctrl + A - go to the beginning of the line
+Ctrl + E - go to the end of the line
+
+## Chaining commands together
+
+```Bash
+sudo apt update; sudo apt dist-upgrade
+# with ; we run command one by one, with second one run even if first one fails
+ls -l; echo "hello world"
+# with && we run command one by one but second one won't run if the first one fails
+ls -l && echo "hello world"
+# To see the final part of the file and keep it updated as it changes - monitor tail of the log
+# CTRL + C to cancel out
+tail -f /var/log/syslog
+```
