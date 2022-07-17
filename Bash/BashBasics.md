@@ -92,3 +92,10 @@ reset
 # Run program and go back to the same terminal leaving program running - CTRL + Z - that menimizes program to background
 # To return to the app - fg command
 ```
+
+## Select all in nano
+
+To select all in nano it is possible to use
+Ctrl+6 - to set a mark in the very beginning of a file
+Alt+T (or Alt+Shift+T) to cut to the end of the file
+Ctrl+U - to uncut content (but you should still be able to paste it)
