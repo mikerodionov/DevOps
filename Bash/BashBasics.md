@@ -154,3 +154,74 @@ ls -l && echo "hello world"
 # CTRL + C to cancel out
 tail -f /var/log/syslog
 ```
+
+## Truncating files
+
+```Bash
+# Truncate file/empty out log, -s 0 = set size to 0 (eleminate all contents)
+truncate -s 0 hello.txt
+```
+
+## column command
+
+```Bash
+# Pipe output to mount for better readability
+# -t to create table
+mount | column -t
+```
+
+## Linux filesystem basics
+
+```Bash
+# View folder hierarchy/structure
+tree / -L 1
+# or use ls
+ls /
+# Conventional folders description
+# /bin - dir which contains important executables and core OS commands
+# in modern distributions this dir tends to be sym linked to usr/bin
+
+# /boot - contains files needed by the bootloader, initial RAM file system and kernel
+
+# /dev - contains device files which are dynamically created based on the various physical and virtual devices connnected to your system
+# in Linux everything is a file or directory, including device
+# nvme N - drive, pN - partition
+ls -l /dev/nvme*
+
+# /etc - contains configuration files and startup scripts
+# e.g. SSH server config - /etc/ssh/sshd_config
+
+# /home - individual user's files, by default that will be your terminal start directory
+# ~ or /home/username
+# this directory also contains configuration files specific to the user (.bashrc .config etc)
+
+# /lib - holds shared libraries for system programs, shared libraries can be used by multiple programs
+# depending on the system you may have multiple /lib directories - /lib32, /lib64
+# frequently these dirs sym linked
+# lib > /usr/lib
+# lib64 > /usr/lib64
+
+# /lost+found - contains chunks of broken files after system crash
+
+# /media - mount point for FSs stored on removable media
+
+# /mnt - mount point for temporary mounted devices (e.g. mount point for NAS etc.)
+
+# /opt - rarely used nowaday, directory for optional software packages, mostly kept around for compatibility purposes
+
+# /proc - pseudo file system which gets created at startup and disappears at shutdown, contains info about every running process on your machine, with each active process having its own subdirectory
+# contains a lot of info about the system, e.g. CPU info
+cat /proc/cpuinfo
+man proc
+
+# /root - root user home directory, accessible only as root user/with sudo
+
+# /run - contains info describing your system since boot time such as who is logged in and what demons might be running
+
+# /sbin - contains system essential files, similar to the bin, traditionally programs in sbin were statically linked, on modern systems there is little practical difference between bin and sbin
+# /sbin is often sym linked to /usr/sbin on modern Linux versions
+
+# /srv - used for files server by a web server or other server mecanisms such as FTP, rarely used nowadays (with openSUSE being notable exception which uses it as default for web servers)
+
+# /sys - contains info about devices, drivers and kernel features, like /proc but better structured
+```
