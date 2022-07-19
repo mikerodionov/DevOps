@@ -39,5 +39,6 @@ kubectl exec -it pod_name -n namespace_name -- bash
 ## Get default/configured kubeconfig location 
 
 ```
+# Display value of $KUBECONFIG if present, otherwise print default path
 [[ ! -z "$KUBECONFIG" ]] && echo "$KUBECONFIG" || echo "$HOME/.kube/config"
 ```
