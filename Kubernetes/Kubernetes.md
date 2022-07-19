@@ -35,3 +35,9 @@ kubectl get secret <SECRET_NAME> -o jsonpath="{.data.<DATA>}" | base64 --decode
 ```Bash
 kubectl exec -it pod_name -n namespace_name -- bash
 ```
+
+## Get default/configured kubeconfig location 
+
+```
+[[ ! -z "$KUBECONFIG" ]] && echo "$KUBECONFIG" || echo "$HOME/.kube/config"
+```
