@@ -1,4 +1,4 @@
-To change Bash prompt to [Current Path] [GitBranch] [Kubernetes Context]
+To change Bash prompt to [Current Path] [GitBranch] [Kubernetes Context] execute below code or add it to the end of ~/.bashrc to make this change permanent:
 
 ```Bash
 parse_git_branch() {
