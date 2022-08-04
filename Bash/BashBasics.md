@@ -225,3 +225,12 @@ man proc
 
 # /sys - contains info about devices, drivers and kernel features, like /proc but better structured
 ```
+
+## Reload .bashrc
+
+```
+# 3 options
+source ~/.bashrc
+. ~/.bashrc
+exec bash
+```
