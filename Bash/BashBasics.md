@@ -55,6 +55,8 @@ cat test.tx | xclip -sel clip
 ```Bash
 # Delete user
 sudo deluser user1
+# List users - CentOS 7
+cut -d: -f1 /etc/passwd
 ```
 
 ## SSH
