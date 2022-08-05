@@ -215,6 +215,8 @@ ls -l /dev/nvme*
 # contains a lot of info about the system, e.g. CPU info
 cat /proc/cpuinfo
 man proc
+# memory info
+cat /proc/meminfo
 
 # /root - root user home directory, accessible only as root user/with sudo
 
