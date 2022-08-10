@@ -238,3 +238,10 @@ source ~/.bashrc
 . ~/.bashrc
 exec bash
 ```
+
+## Worknig with disks
+
+```Bash
+# View disks information
+lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
+```
