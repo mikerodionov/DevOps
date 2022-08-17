@@ -10,6 +10,7 @@ resolvectl flush-caches
 ## Get IP address
 
 ```Bash
+# Various commands to get system's IP address
 ip a
 ip addr
 # ifconfig may need to be installed - sudo yum -y install net-tools
