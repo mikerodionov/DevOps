@@ -67,7 +67,7 @@ ssh -v localhost
 ssh -v
 ```
 
-## Navugatung directories
+## Navigating directories
 
 ```Bash
 # Go back to a previous directory
@@ -92,7 +92,7 @@ reset
 
 ```Bash
 # Run program and go back to the same terminal leaving program running - CTRL + Z - that minimizes program to background
-# To return to the app - fg command (foregroung)
+# To return to the app - fg command (foreground)
 # htop - utility to monitor system resources: htop CTRL + Z, fg
 # If you close shell you will lose whatever is running in background
 ```
