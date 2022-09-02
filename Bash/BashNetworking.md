@@ -19,3 +19,10 @@ hostname -I
 nmcli
 ip route
 ```
+
+## Check for active ssh sessions
+
+```Bash
+last -a | grep -i still
+who
+```
