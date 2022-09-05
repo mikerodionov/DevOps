@@ -244,4 +244,8 @@ exec bash
 ```Bash
 # View disks information
 lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
+# Check free space
+df -h
+# Look up for largest file / directory
+du -a -h /var | sort -h -r | head -n 10
 ```
