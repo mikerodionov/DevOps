@@ -26,3 +26,10 @@ ip route
 last -a | grep -i still
 who
 ```
+## Update DNS from DHCP
+
+```Bash
+# Command below will update /etc/resolv.conf
+dhclient
+cat /etc/resolv.conf
+```
