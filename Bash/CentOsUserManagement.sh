@@ -7,3 +7,5 @@ groupadd groupname
 usermod -a -G examplegroup exampleusername
 # View user's groups
 groups username
+# Get existing users
+cut -d: -f1 /etc/passwd
