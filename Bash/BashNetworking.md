@@ -32,4 +32,7 @@ who
 # Command below will update /etc/resolv.conf
 dhclient
 cat /etc/resolv.conf
+# If dhclient already running
+sudo -Es
+dhclient -r; dhclient
 ```
