@@ -249,3 +249,10 @@ df -h
 # Look up for largest file / directory
 du -a -h /var | sort -h -r | head -n 10
 ```
+## grep
+
+```Bash
+# Search for pattern which starts from - hyphen
+grep -- -X
+tar --help | grep -- -f
+```
