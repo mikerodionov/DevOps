@@ -80,3 +80,10 @@ git merge upstream/master
 ```Bash
 git rebase --abort
 ```
+
+## Restore file which has been deleted with no commit
+
+```Bash
+# work regardless of whether the deletion was staged or not
+git checkout HEAD <filename>
+```
