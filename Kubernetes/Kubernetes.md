@@ -42,3 +42,15 @@ kubectl exec -it pod_name -n namespace_name -- bash
 # Display value of $KUBECONFIG if present, otherwise print default path
 [[ ! -z "$KUBECONFIG" ]] && echo "$KUBECONFIG" || echo "$HOME/.kube/config"
 ```
+
+## Evicted pods
+
+```Bash
+# List evicted pods in all namespaces
+kubectl get pod -A | grep Evicted | awk '{print $2}'
+# Delete all evicted pods in all namespaces
+kubectl get ns | awk '{if (NR!=1) print $1}' | while read line; do
+    # echo $line   
+    kubectl get pod -n $line | grep Evicted | awk '{print $1}' | xargs kubectl delete pod -n $line
+done
+```
