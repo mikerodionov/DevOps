@@ -54,3 +54,11 @@ kubectl get ns | awk '{if (NR!=1) print $1}' | while read line; do
     kubectl get pod -n $line | grep Evicted | awk '{print $1}' | xargs kubectl delete pod -n $line
 done
 ```
+
+## Connect to AKS node using debug container
+
+```Bash
+kubectl get nodes
+node=<NODE_NAME>
+kubectl debug node/$node -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
+```
