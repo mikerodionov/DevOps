@@ -53,6 +53,12 @@ kubectl get ns | awk '{if (NR!=1) print $1}' | while read line; do
     # echo $line   
     kubectl get pod -n $line | grep Evicted | awk '{print $1}' | xargs kubectl delete pod -n $line
 done
+# Delete evicted pods in specific namespace
+ns=<NAMESPACE>
+k get pods -n $ns | grep Evicted | awk '{if (NR!=1) print $1}' | while read line; do
+#echo $line
+    kubectl delete pod $line -n $ns
+done
 ```
 
 ## Connect to AKS node using debug container
