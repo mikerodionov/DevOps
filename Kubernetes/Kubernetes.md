@@ -68,3 +68,19 @@ kubectl get nodes
 node=<NODE_NAME>
 kubectl debug node/$node -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
 ```
+
+## Scaling down
+
+```Bash
+# MSFT documentation - https://learn.microsoft.com/en-us/azure/aks/resize-node-pool?source=recommendations&tabs=azure-cli
+# Get nodes
+kubectl get nodes
+# Cordon highest number node(s)
+kubectl cordon <node1> <node2>
+# Drain node
+kubectl drain <node1> <node2> --ignore-daemonsets --delete-emptydir-data --force
+# In case you run into - Cannot evict pod as it would violate the pod's disruption budget - remove disruption budget
+kubectl get poddisruptionbudget -A
+kubectl delete poddisruptionbudget <name> -n <namespace>
+# Scale down nodepool via portal
+```
