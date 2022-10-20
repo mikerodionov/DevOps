@@ -9,3 +9,5 @@ usermod -a -G examplegroup exampleusername
 groups username
 # Get existing users
 cut -d: -f1 /etc/passwd
+# Disable password expiration
+chage -I -1 -m 0 -M 99999 -E -1 username
