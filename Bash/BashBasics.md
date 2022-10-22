@@ -228,6 +228,9 @@ cat /proc/meminfo
 # /srv - used for files server by a web server or other server mecanisms such as FTP, rarely used nowadays (with openSUSE being notable exception which uses it as default for web servers)
 
 # /sys - contains info about devices, drivers and kernel features, like /proc but better structured
+
+# Check folder size
+du -hs your_directory
 ```
 
 ## Reload .bashrc
