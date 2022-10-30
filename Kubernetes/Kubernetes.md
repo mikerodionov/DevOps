@@ -16,6 +16,13 @@ kubectl delete all --all -n namespace_name
 kubectl delete namespace $(kubectl get namespaces --no-headers=true | awk {'print $1'})
 ```
 
+## Verify default namespace
+
+```Bash
+kubectl config view | grep namespace:
+kubectl config view -o jsonpath={.contexts[].context.namespace}
+```
+
 ## Work with configmaps
 
 ```Bash
