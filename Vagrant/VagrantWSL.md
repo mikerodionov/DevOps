@@ -19,7 +19,7 @@ Vagrant data is on a USB stick, a common case is that chmod is
 not supported. The key will need to be moved to a filesystem that
 supports chmod
 ```
-That happens when you run Vagrant from directory located Windows volume mounted into WSL (/mnt/c), to resolve this add path to Vagrant directory into 
+That happens when you run Vagrant from directory located on Windows volume mounted into WSL (/mnt/c), to resolve this add path to Vagrant directory into 
 
 ```Bash
 # Add var for current session
