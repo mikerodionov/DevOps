@@ -58,6 +58,9 @@ git checkout filename
 
 ```Bash
 git config --get remote.origin.url
+# When Git keeps prompting for password after adding SSH public key in GitHub it may means that your origin is configured to use HTTPS
+git remote -v # verify used URL
+git remote set-url origin git@github.com:yourname/yourrepo.git # set correct URL
 ```
 ## Git update forked repo from original source
 
