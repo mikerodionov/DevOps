@@ -22,5 +22,8 @@ supports chmod
 That happens when you run Vagrant from directory located Windows volume mounted into WSL (/mnt/c), to resolve this add path to Vagrant directory into 
 
 ```Bash
+# Add var for current session
 export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/vagrant
+# Add permanently
+echo 'export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/vagrant' >> ~/.profile
 ```
