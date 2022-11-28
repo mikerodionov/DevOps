@@ -1,24 +1,25 @@
 # Docker info & commands
 
+## Docker commands
+
 List all containers:
 ```Bash
 docker ps -a
 ```
+## Bulk operations
 
-Remove all containers:
 ```Bash
-docker rm -f $(docker ps -a -q)
+docker stop $(docker ps -a -q) # stop all containers
+docker rm -f $(docker ps -a -q) # remove all containers
 ```
 
-# Docker Swarm info & commands
+## Docker Swarm info & commands
 
 Swarm config folder (should be backed up):
 
 ```Bash
-/var/lib/docker/swarm
+/var/lib/docker/swarm # This folder contains - certificates, docker-state.json, raft, state.json, worker
 ```
-
-This folder contains - certificates, docker-state.json, raft, state.json, worker
 
 Manage Swarm nodes
 
