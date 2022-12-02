@@ -1,3 +1,5 @@
+# List users
+cut -d: -f1 /etc/passwd
 # Create user & set password
 adduser username
 passwd username
