@@ -23,6 +23,8 @@ rpm -q centos-linux-release # requires CentOS 6+ & centos-linux-release package
 rpm -q centos-release # requires CentOS 6+
 lsb_release -a # requires redhat-lsb package to be installed
 rpm -E %{rhel} # RPM macro to get major version
+# AlmaLinux
+cat /etc/almalinux-release
 ```
 
 ## Grant execute permissions on sh script file
