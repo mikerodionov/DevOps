@@ -1,5 +1,7 @@
 # List users
 cut -d: -f1 /etc/passwd
+# List sudo users
+grep '^sudo:.*$' /etc/group | cut -d: -f4
 # Create user & set password
 adduser username
 passwd username
