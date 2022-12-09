@@ -9,6 +9,8 @@ passwd username
 groupadd groupname
 # Add user to group
 usermod -a -G examplegroup exampleusername
+# Add user to sudo group
+sudo usermod -aG sudo <username>
 # View user's groups
 groups username
 # Get existing users
