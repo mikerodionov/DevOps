@@ -261,3 +261,14 @@ du -a -h /var | sort -h -r | head -n 10
 grep -- -X
 tar --help | grep -- -f
 ```
+
+## cat
+
+```Bash
+# Create multiline file
+cat <<EOF > print.sh
+#!/bin/bash
+echo \$PWD
+echo $PWD
+EOF
+```
