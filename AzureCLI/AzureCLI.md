@@ -55,4 +55,7 @@ az vm user update \
   --name myVM \
   --username azureuser \
   --password myNewPassword
+
+# Get VM sizes per location
+az vm list-sizes --location "westeurope"
 ```
