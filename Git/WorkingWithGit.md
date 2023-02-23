@@ -1,3 +1,22 @@
+## Essential commands
+
+```Bash
+# Check remote URL for repo you working with
+# Just URL
+git config --get remote.origin.url
+# Full output
+git remote show origin
+
+# View / Switch branch
+git branch # view branches
+git checkout <existing_branch> # switch to existing branch
+git checkout -b <new_branch> # create a new branch and switch to it
+
+# Delete branch
+git branch -d <local_branch_name> # delete branch locally
+git push origin --delete <remote_branch_name> # delete remote branch
+```
+
 ## Initial config for commits
 ```
 git config --global user.name "Your Name"
@@ -87,6 +106,6 @@ git rebase --abort
 ## Restore file which has been deleted with no commit
 
 ```Bash
-# work regardless of whether the deletion was staged or not
+# Work regardless of whether the deletion was staged or not
 git checkout HEAD <filename>
 ```
