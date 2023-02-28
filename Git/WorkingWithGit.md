@@ -15,6 +15,9 @@ git checkout -b <new_branch> # create a new branch and switch to it
 # Delete branch
 git branch -d <local_branch_name> # delete branch locally
 git push origin --delete <remote_branch_name> # delete remote branch
+
+# Set upstream for local branch
+git branch --set-upstream-to origin/master
 ```
 
 ## Initial config for commits
