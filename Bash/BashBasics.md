@@ -59,6 +59,8 @@ cat test.tx | xclip -sel clip
 sudo deluser user1
 # List users - CentOS 7
 cut -d: -f1 /etc/passwd
+# Change password
+sudo passwd <USER_NAME>
 ```
 
 ## SSH
