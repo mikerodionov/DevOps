@@ -69,6 +69,17 @@ sudo passwd <USER_NAME>
 # Check SSH Server version
 ssh -v localhost
 ssh -v
+
+# Generate and use SSH key
+ssh-keygen -t ed25519 -C "your_email@example.com"
+chmod 400 ~/.ssh/id_rsa # ser file permissions
+# Run SSH agent
+eval "$(ssh-agent -s)" # start the ssh-agent in the background
+# Kill SSH agent
+eval "$(ssh-agent -k)"
+# If you don't manually kill it off, the agent will stay resident in your system, which introduces 2 potential problems
+# 1) You will be spawning another ssh-agent processs every time you log in,  which bloats the process table although footprint is small
+# 2) Each of those processes will have your unlocked private keys in their memory; if an attacker were to gain access to your system and exploit a hypothetical bug in either kernel memory management or the ssh-agent code itself he can potentially extract your private keys
 ```
 
 ## Navigating directories
