@@ -28,7 +28,9 @@ git config --global user.email "youremail@yourdomain.com"
 git config --list
 ```
 
-## When you need to push creating remote branch
+## Working with branches
+
+### When you need to push creating remote branch
 
 When remote branch not yet exist and you need to create if from local branch:
 
@@ -38,7 +40,7 @@ When remote branch not yet exist and you need to create if from local branch:
 git push -u origin master
 ```
 
-## Delete remote branch
+### Delete remote branch
 ```
 git push RemoteName --delete BranchName
 # other option
@@ -52,12 +54,18 @@ git branch -r
 git fetch --all --prune
 ```
 
-## Delete local branch
+### Delete local branch
 ```
 git branch -d local_branch_name
 ```
 
-## To merge between main and working branch, pull main branch then switch to working and run (when working gets behing main)
+### Synchronize branch list
+
+```
+git fetch -p
+```
+
+### To merge between main and working branch, pull main branch then switch to working and run (when working gets behing main)
 ```
 git merge main
 
