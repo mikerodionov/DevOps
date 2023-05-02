@@ -120,3 +120,17 @@ git rebase --abort
 # Work regardless of whether the deletion was staged or not
 git checkout HEAD <filename>
 ```
+
+## Using sparse-checkout
+
+```
+# Useful when working with very big repo/mono-repo, so that you touch/pull only selected directories
+mkdir your-repo-dir
+cd your-repo-dir
+git init
+git remote add -f origin ssh://repo_url.git
+git sparse-checkout init
+git sparse-checkout set directory1 direcotry2 # to set specific directories you want to work with
+git sparse-checkout list # to confirm added directories
+git pull origin master
+```
