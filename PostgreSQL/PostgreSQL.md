@@ -1,8 +1,22 @@
 # PostgreSQL
 
 ```Bash
-pg_config # view configuration
+# View configuration
+pg_config
+# Locate pg_config
 locate bin/postgres # if postgres or pg_config can't be run without specifying full path use this to identify full path
+# Check version
 postgres -V
 postgres --v
+# Check user used by PostgeSQL on CentOS 7.5
+# Option A
+systemctl show -p User postgresql-15
+# Option B
+systemctl show -p User postgresql-15
+ps -o user -p <PID>
+# Check port used by PostgeSQL
+# First confirm data directory
+sudo -u postgres psql -c "SHOW data_directory;"
+# Then inspect config file
+sudo cat <data_directory>/postgresql.conf | grep -i data_directory
 ```
