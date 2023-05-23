@@ -18,5 +18,6 @@ ps -o user -p <PID>
 # First confirm data directory
 sudo -u postgres psql -c "SHOW data_directory;"
 # Then inspect config file
-sudo cat <data_directory>/postgresql.conf | grep -i data_directory
+sudo cat <data_directory>/postgresql.conf | grep -i port
+# If you see #port = 5432 then default port 5432 is used
 ```
