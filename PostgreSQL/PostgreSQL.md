@@ -12,7 +12,7 @@ postgres --v
 # Option A
 systemctl show -p User postgresql-15
 # Option B
-systemctl show -p User postgresql-15
+systemctl status bitbucket | grep "Main PID"
 ps -o user -p <PID>
 # Check port used by PostgeSQL
 # First confirm data directory
