@@ -1,3 +1,20 @@
+## Installing Git
+
+```Bash
+# Build and install specific version of Git - CentOS 7.5
+cd ~
+sudo yum update
+sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel autoconf gcc
+wget https://www.kernel.org/pub/software/scm/git/git-2.31.0.tar.gz
+tar -xf git-2.31.0.tar.gz
+cd git-2.31.0
+make configure
+./configure --prefix=/usr/local
+make all
+sudo make install
+git --version
+```
+
 ## Essential commands
 
 ```Bash
