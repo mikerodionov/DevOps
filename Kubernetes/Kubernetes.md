@@ -79,6 +79,13 @@ node=<NODE_NAME>
 kubectl debug node/$node -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
 ```
 
+## Export kubelet logs from an AKS node to a file
+
+```
+kubectl get --raw "/api/v1/nodes/<aks-node>/proxy/logs/messages" > messages-log.log
+```
+
+
 ## Scaling down
 
 ```Bash
