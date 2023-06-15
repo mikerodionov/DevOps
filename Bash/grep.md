@@ -18,7 +18,8 @@ grep --include=\*.{c,h} -rnw '/path/' -e "pattern"
 
 grep --exclude=\*.o -rnw '/path/' -e "pattern"
 
-# For directories it's possible to exclude one or more directories using the --exclude-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
+# For directories it's possible to exclude one or more directories using the --exclude-dir parameter. 
+# For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
 
 grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/' -e "pattern"
 ```
