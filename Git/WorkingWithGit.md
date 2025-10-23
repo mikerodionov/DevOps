@@ -47,6 +47,16 @@ git config --list
 
 ## Working with branches
 
+## Create new branch
+
+```
+# Old
+git checkout -b new_branch
+# Modern / recommended
+git swich -c new_branch
+# small -b/-c preferred, capital -B/-C will silently overwrite existing local branch if exist
+```
+
 ### When you need to push creating remote branch
 
 When remote branch not yet exist and you need to create if from local branch:
@@ -82,7 +92,18 @@ git branch -d local_branch_name
 git fetch -p
 ```
 
-### To merge between main and working branch, pull main branch then switch to working and run (when working gets behing main)
+### View all files changed on your branch
+
+```
+# origin/main...HEAD -  special revision range - origin/main...HEAD (three dots) always focuses on “what your branch adds” relative to main.
+git diff --name-only origin/main...HEAD
+# origin/main..HEAD (two dots) in git log: commits reachable from HEAD and not from origin/main.
+# origin/main..HEAD with git diff: diff between the two tips (includes both sides’ changes; can show conflicts from main you haven’t merged).
+# origin/main...HEAD (three dots) always focuses on “what your branch adds” relative to main.
+```
+
+### To merge between main and working branch, pull main branch then switch to working and run (when working gets behind main)
+
 ```
 git merge main
 
